@@ -1,0 +1,14 @@
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\WindowsServiceClotureDeFiche.exe.config
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\WindowsServiceClotureDeFiche.exe
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\WindowsServiceClotureDeFiche.pdb
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\MySql.Data.dll
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\Google.Protobuf.dll
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\Renci.SshNet.dll
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\bin\Debug\MySql.Data.xml
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\obj\Debug\WindowsServiceClotureDeFiche.csprojAssemblyReference.cache
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\obj\Debug\WindowsServiceClotureDeFiche.csproj.CoreCompileInputs.cache
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\obj\Debug\WindowsServiceClotureDeFiche.csproj.CopyComplete
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\obj\Debug\WindowsServiceClotureDeFiche.exe
+C:\Users\Deeja\source\repos\WindowsServiceClotureDeFiche\obj\Debug\WindowsServiceClotureDeFiche.pdb
