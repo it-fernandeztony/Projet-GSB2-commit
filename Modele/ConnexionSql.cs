@@ -12,22 +12,33 @@ namespace WindowsServiceClotureDeFiche
     class ConnexionSql
     {
         // propriétés
-        private bool finCurseur=true; // fin du curseur atteinte
-        private MySqlConnection connection; // chaine de connexion
-        private MySqlCommand command; // envoi de la requête à la base de données
-        private MySqlDataReader reader; // gestion du curseur
-
+        private  bool finCurseur=true; // fin du curseur atteinte
+        private static string chaineConnection = "server=localhost;user id=root;database=gsb_frais;SslMode=none";
+        private  MySqlConnection connexion; // chaine de connexion
+        private  MySqlCommand command; // envoi de la requête à la base de données
+        private  MySqlDataReader reader; // gestion du curseur
+        private static ConnexionSql connexionGSB = null;
         // constructeur
-        public ConnexionSql(string chaineConnection)
+        private  ConnexionSql()
         {
-            this.connection = new MySqlConnection(chaineConnection);
-            this.connection.Open();
+            this.connexion = new MySqlConnection(chaineConnection);
+            this.connexion.Open();
+        }
+
+        // Assesseur de la connexion
+        public ConnexionSql getConnexionSql()
+        {
+            if (connexionGSB == null)
+            {
+                connexionGSB = new ConnexionSql();
+            }
+            return connexionGSB;
         }
 
         // execution d'une requete select
         public void reqSelect(string chaineRequete)
         {
-            this.command = new MySqlCommand(chaineRequete, this.connection);
+            this.command = new MySqlCommand(chaineRequete, this.connexion);
             this.reader = this.command.ExecuteReader();
             this.finCurseur = false;
             this.suivant();
@@ -36,7 +47,7 @@ namespace WindowsServiceClotureDeFiche
         // execution d'une requete update
         public void reqUpdate(string chaineRequete)
         {
-            this.command = new MySqlCommand(chaineRequete, this.connection);
+            this.command = new MySqlCommand(chaineRequete, this.connexion);
             this.command.ExecuteNonQuery();
             this.finCurseur = true;
         }
@@ -65,7 +76,7 @@ namespace WindowsServiceClotureDeFiche
         // fermeture de la connexion
         public void close()
         {
-            this.connection.Close();
+            this.connexion.Close();
         }
     }
 
