@@ -11,7 +11,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <summary>
         /// Retourne le mois précédent le mois actuel
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>Retourne un mois sous la forme -MM- de type string</returns>
         public static string GetMoisPrecedent()
         {
             DateTime dateDuJour = DateTime.Today; // Permet d'avoir la date d'aujourd'hui
@@ -23,16 +23,16 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// Retourne le mois précédent la date entrée en paramètre 
         /// </summary>
         /// <param name="date"></param>
-        /// <returns>string</returns>
+        /// <returns>Retourne un mois sous la forme -MM- de type string</returns>
         public static string GetMoisPrecedent(DateTime date)
         {
             return date.AddMonths(-1).ToString("MM");
         }
-        
+
         /// <summary>
         /// Retourne le mois suivant du mois actuel
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>Retourne un mois sous la forme -MM- de type string/returns>
         public static string GetMoisSuivant()
         {
             return GetMoisSuivant(DateTime.Today); // Appel de la méthode GetMoisSuivant qui prend un paramètre
@@ -42,7 +42,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// Retourne le mois suivant de la date entrée en paramètre
         /// </summary>
         /// <param name="date"></param>
-        /// <returns></returns>
+        /// <returns>Retourne un mois sous la forme -MM- de type string</returns>
         public static string GetMoisSuivant(DateTime date)
         {
             return date.AddMonths(1).ToString("MM"); 
@@ -53,7 +53,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// </summary>
         /// <param name="jour1"></param>
         /// <param name="jour2"></param>
-        /// <returns>bool</returns>
+        /// <returns>Retourne vrai ou faux</returns>
         public static Boolean Entre(int jour1, int jour2)
         {
 
@@ -67,7 +67,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <param name="jour1"></param>
         /// <param name="jour2"></param>
         /// <param name="date"></param>
-        /// <returns>bool</returns>
+        /// <returns>Retourne vrai ou faux</returns>
         public static Boolean Entre(int jour1, int jour2, DateTime date)
         {
             int jour = date.Day;

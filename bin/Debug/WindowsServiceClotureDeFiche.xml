@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WindowsServiceClotureDeFiche</name>
+    </assembly>
+    <members>
+        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisPrecedent">
+            <summary>
+            Retourne le mois précédent le mois actuel
+            </summary>
+            <returns>Retourne un mois sous la forme -MM- de type string</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisPrecedent(System.DateTime)">
+            <summary>
+            Retourne le mois précédent la date entrée en paramètre 
+            </summary>
+            <param name="date"></param>
+            <returns>Retourne un mois sous la forme -MM- de type string</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisSuivant" -->
+        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisSuivant(System.DateTime)">
+            <summary>
+            Retourne le mois suivant de la date entrée en paramètre
+            </summary>
+            <param name="date"></param>
+            <returns>Retourne un mois sous la forme -MM- de type string</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.Entre(System.Int32,System.Int32)">
+            <summary>
+            Retourne vrai si la date du jour se trouve entre les deux jours entrés en paramètre
+            </summary>
+            <param name="jour1"></param>
+            <param name="jour2"></param>
+            <returns>Retourne vrai ou faux</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.Entre(System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            Retourne vrai si la date entrée en paramètre se trouve entre les deux jours 
+            </summary>
+            <param name="jour1"></param>
+            <param name="jour2"></param>
+            <param name="date"></param>
+            <returns>Retourne vrai ou faux</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.getConnexionSql">
+            <summary>
+            Créer une connexion
+            </summary>
+            <returns>Retourne un objet de type ConnexionSql</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.reqSelect(System.String)">
+            <summary>
+            Execution d'une requête select
+            </summary>
+            <param name="chaineRequete"></param>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.reqUpdate(System.String)">
+            <summary>
+            Execution d'une requête update
+            </summary>
+            <param name="chaineRequete"></param>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.champ(System.String)">
+            <summary>
+            Récupération d'un champ
+            </summary>
+            <param name="nomChamp"></param>
+            <returns>Retourne le nom d'un champ</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.suivant">
+            <summary>
+            Passage à la ligne suivante du curseur
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.fin">
+            <summary>
+            Test de la fin du curseur
+            </summary>
+            <returns>Retourne vrai ou faux</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.close">
+            <summary>
+            Fermeture de la connexion
+            </summary>
+        </member>
+        <member name="F:WindowsServiceClotureDeFiche.Service1.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Service1.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Service1.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Program.SetTimer">
+            <summary>
+            Création du timer
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.Program.OnTimedEvent(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Evénement fin de timer
+            </summary>
+            <param name="source"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>
