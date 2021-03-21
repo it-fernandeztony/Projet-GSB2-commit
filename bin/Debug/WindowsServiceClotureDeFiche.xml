@@ -4,81 +4,96 @@
         <name>WindowsServiceClotureDeFiche</name>
     </assembly>
     <members>
-        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisPrecedent">
+        <member name="T:WindowsServiceClotureDeFiche.GestionDeDates">
+            <summary>
+            Classe de gestion de date
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.GestionDeDates.GetMoisPrecedent">
             <summary>
             Retourne le mois précédent le mois actuel
             </summary>
             <returns>Retourne un mois sous la forme -MM- de type string</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisPrecedent(System.DateTime)">
+        <member name="M:WindowsServiceClotureDeFiche.GestionDeDates.GetMoisPrecedent(System.DateTime)">
             <summary>
             Retourne le mois précédent la date entrée en paramètre 
             </summary>
-            <param name="date"></param>
+            <param name="date">Une date</param>
             <returns>Retourne un mois sous la forme -MM- de type string</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisSuivant" -->
-        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.GetMoisSuivant(System.DateTime)">
+        <member name="M:WindowsServiceClotureDeFiche.GestionDeDates.GetMoisSuivant">
+            <summary>
+            Retourne le mois suivant du mois actuel
+            </summary>
+            <returns>Retourne un mois sous la forme -MM- de type string</returns>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.GestionDeDates.GetMoisSuivant(System.DateTime)">
             <summary>
             Retourne le mois suivant de la date entrée en paramètre
             </summary>
-            <param name="date"></param>
+            <param name="date">Une date</param>
             <returns>Retourne un mois sous la forme -MM- de type string</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.Entre(System.Int32,System.Int32)">
+        <member name="M:WindowsServiceClotureDeFiche.GestionDeDates.Entre(System.Int32,System.Int32)">
             <summary>
             Retourne vrai si la date du jour se trouve entre les deux jours entrés en paramètre
             </summary>
-            <param name="jour1"></param>
-            <param name="jour2"></param>
+            <param name="jour1">Le jour le plus petit</param>
+            <param name="jour2">Le jour le plus grand</param>
             <returns>Retourne vrai ou faux</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.Modele.GestionDeDates.Entre(System.Int32,System.Int32,System.DateTime)">
+        <member name="M:WindowsServiceClotureDeFiche.GestionDeDates.Entre(System.Int32,System.Int32,System.DateTime)">
             <summary>
             Retourne vrai si la date entrée en paramètre se trouve entre les deux jours 
             </summary>
-            <param name="jour1"></param>
-            <param name="jour2"></param>
-            <param name="date"></param>
+            <param name="jour1">Le jour le plus petit</param>
+            <param name="jour2">Le jour le plus grand</param>
+            <param name="date">Une date</param>
             <returns>Retourne vrai ou faux</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.getConnexionSql">
+        <member name="T:WindowsServiceClotureDeFiche.ConnexionSql">
+            <summary>
+            Classe de connexion
+            </summary>
+        </member>
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.GetConnexionSql">
             <summary>
             Créer une connexion
             </summary>
             <returns>Retourne un objet de type ConnexionSql</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.reqSelect(System.String)">
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.ReqSelect(System.String)">
             <summary>
             Execution d'une requête select
             </summary>
-            <param name="chaineRequete"></param>
+            <param name="chaineRequete">La requête</param>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.reqUpdate(System.String)">
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.ReqUpdate(System.String)">
             <summary>
             Execution d'une requête update
             </summary>
-            <param name="chaineRequete"></param>
+            <param name="chaineRequete">La requête</param>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.champ(System.String)">
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.Champ(System.String)">
             <summary>
             Récupération d'un champ
             </summary>
-            <param name="nomChamp"></param>
+            <param name="nomChamp">Nom du champ</param>
             <returns>Retourne le nom d'un champ</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.suivant">
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.Suivant">
             <summary>
             Passage à la ligne suivante du curseur
             </summary>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.fin">
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.Fin">
             <summary>
             Test de la fin du curseur
             </summary>
             <returns>Retourne vrai ou faux</returns>
         </member>
-        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.close">
+        <member name="M:WindowsServiceClotureDeFiche.ConnexionSql.Close">
             <summary>
             Fermeture de la connexion
             </summary>

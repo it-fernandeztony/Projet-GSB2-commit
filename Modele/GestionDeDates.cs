@@ -1,11 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Author : FERNANDEZ Tony
+//Created On: ‎samedi ‎6 ‎mars ‎2021, ‏‎18:48:43
+//Last Modified on : ‎dimanche ‎21 ‎mars ‎2021, ‏‎11:16:37
+//‎Copy Rights : GSB
+//Description : Classe de gestion de date
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace WindowsServiceClotureDeFiche.Modele
+using System;
+
+namespace WindowsServiceClotureDeFiche
 {
+    /// <summary>
+    /// Classe de gestion de date
+    /// </summary>
     public abstract class GestionDeDates
     {
         /// <summary>
@@ -22,7 +29,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <summary>
         /// Retourne le mois précédent la date entrée en paramètre 
         /// </summary>
-        /// <param name="date"></param>
+        /// <param name="date">Une date</param>
         /// <returns>Retourne un mois sous la forme -MM- de type string</returns>
         public static string GetMoisPrecedent(DateTime date)
         {
@@ -32,7 +39,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <summary>
         /// Retourne le mois suivant du mois actuel
         /// </summary>
-        /// <returns>Retourne un mois sous la forme -MM- de type string/returns>
+        /// <returns>Retourne un mois sous la forme -MM- de type string</returns>
         public static string GetMoisSuivant()
         {
             return GetMoisSuivant(DateTime.Today); // Appel de la méthode GetMoisSuivant qui prend un paramètre
@@ -41,7 +48,7 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <summary>
         /// Retourne le mois suivant de la date entrée en paramètre
         /// </summary>
-        /// <param name="date"></param>
+        /// <param name="date">Une date</param>
         /// <returns>Retourne un mois sous la forme -MM- de type string</returns>
         public static string GetMoisSuivant(DateTime date)
         {
@@ -51,8 +58,8 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <summary>
         /// Retourne vrai si la date du jour se trouve entre les deux jours entrés en paramètre
         /// </summary>
-        /// <param name="jour1"></param>
-        /// <param name="jour2"></param>
+        /// <param name="jour1">Le jour le plus petit</param>
+        /// <param name="jour2">Le jour le plus grand</param>
         /// <returns>Retourne vrai ou faux</returns>
         public static Boolean Entre(int jour1, int jour2)
         {
@@ -64,9 +71,9 @@ namespace WindowsServiceClotureDeFiche.Modele
         /// <summary>
         /// Retourne vrai si la date entrée en paramètre se trouve entre les deux jours 
         /// </summary>
-        /// <param name="jour1"></param>
-        /// <param name="jour2"></param>
-        /// <param name="date"></param>
+        /// <param name="jour1">Le jour le plus petit</param>
+        /// <param name="jour2">Le jour le plus grand</param>
+        /// <param name="date">Une date</param>
         /// <returns>Retourne vrai ou faux</returns>
         public static Boolean Entre(int jour1, int jour2, DateTime date)
         {

@@ -1,8 +1,15 @@
-﻿
+﻿//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Author : FERNANDEZ Tony
+//Created On: ‎‎samedi ‎6 ‎mars ‎2021, ‏‎02:40:19
+//Last Modified on : ‎‎vendredi ‎12 ‎mars ‎2021, ‏‎19:44:53
+//‎Copy Rights : GSB
+//Description : Service Windows qui réalise la mise à jour de l'état des fiches de visiteurs
+//              à une certaine période.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 using System;
 using System.ServiceProcess;
 using System.Timers;
-using WindowsServiceClotureDeFiche.Modele;
 
 namespace WindowsServiceClotureDeFiche
 {
@@ -49,7 +56,7 @@ namespace WindowsServiceClotureDeFiche
 
             // Connexion à la bdd et récupération du curseur:
 
-            ConnexionSql crs = ConnexionSql.getConnexionSql();
+            ConnexionSql crs = ConnexionSql.GetConnexionSql();
 
             // On vérifie qu'on est bien entre le 1 et le 10 du mois:
             if (GestionDeDates.Entre(1, 10) == true)
@@ -60,10 +67,10 @@ namespace WindowsServiceClotureDeFiche
                 string moisPrecedent = GestionDeDates.GetMoisPrecedent();
                 string annee = DateTime.Today.AddMonths(-1).ToString("yyyy");
                 string mois = annee + moisPrecedent;
-                crs.reqUpdate("UPDATE fichefrais SET idetat='CL' WHERE mois =" + mois + " AND idetat='CR'");
+                crs.ReqUpdate("UPDATE fichefrais SET idetat='CL' WHERE mois =" + mois + " AND idetat='CR'");
             }
             // Si on est après le 20 du mois:
-            if (GestionDeDates.Entre(20, 31) == true)
+            if (GestionDeDates.Entre(20, 30) == true)
             {
                 ;
                 // Récupération des fiches du mois précédent et maj de celles-ci:
@@ -71,10 +78,10 @@ namespace WindowsServiceClotureDeFiche
                 string annee = DateTime.Today.AddMonths(-1).ToString("yyyy");
                 string mois = annee + moisPrecedent;
 
-                crs.reqUpdate("UPDATE fichefrais SET idetat='RB' WHERE mois = " + mois + " AND idetat='VA'");
+                crs.ReqUpdate("UPDATE fichefrais SET idetat='RB' WHERE mois = " + mois + " AND idetat='VA'");
 
             }
-            crs.close();
+            crs.Close();
         }
     }
 }
